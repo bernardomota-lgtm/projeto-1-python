@@ -2,20 +2,21 @@ from aluno import Aluno
 import os
 
 def titulo(texto):
+    os.system('cls')
     return '*' * 30 + '\n' + texto.center(30) + '\n' + '*' * 30
 
 def processar_opcao(opcao):
-    aluno = Aluno
     print()
     if opcao == 1:
         print(titulo('Cadastrar aluno'))
-        aluno.cadastra_aluno()
-
+        Aluno.cadastra_aluno()
     elif opcao == 2:
         print(titulo('Listar alunos'))
-        aluno.listar_alunos()
+        Aluno.listar_alunos()
     elif opcao == 3:
-        print('3')
+        print(titulo('Buscando alunos'))
+        nome = input('Digite o nome do aluno: ')
+        Aluno.busca_aluno(nome)
     elif opcao == 4:
         print('4')
     elif opcao == 5:
@@ -42,9 +43,7 @@ Escolha: """))
     processar_opcao(opcao)
     menu()
     
-
 def main():
-    os.system('cls')
     menu()
 
 if __name__ == "__main__":
