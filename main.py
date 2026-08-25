@@ -7,31 +7,35 @@ def titulo(texto):
 
 def processar_opcao(opcao):
     print()
-    if opcao == 1:
+    if opcao == '1':
         print(titulo('Cadastrar aluno'))
-        Aluno.cadastra_aluno()
-    elif opcao == 2:
+        Aluno.cadastrar_aluno()
+    elif opcao == '2':
         print(titulo('Listar alunos'))
         Aluno.listar_alunos()
-    elif opcao == 3:
+    elif opcao == '3':
         print(titulo('Buscando alunos'))
         nome = input('Digite o nome do aluno: ')
-        Aluno.busca_aluno(nome)
-    elif opcao == 4:
-        print('4')
-    elif opcao == 5:
+        Aluno.buscar_aluno(nome)
+    elif opcao == '4':
+        print(titulo('Alterar dados do aluno'))
+        nome = input('Digite o nome do aluno: ')
+        Aluno.buscar_aluno(nome)
+        Aluno.alterar_aluno(nome)
+    elif opcao == '5':
         print('5')
-    elif opcao == 6:
+    elif opcao == '6':
         print('6')
-    elif opcao == 0:
-        print('0')
+    elif opcao == '0':
+        print('Saindo')
+        raise SystemExit
     else:
         print('erro')
     
 
 def menu():
     print(titulo('ACADEMIA FIT'))
-    opcao = int(input("""
+    opcao = input("""
 1 - Cadastrar aluno
 2 - Listar alunos
 3 - Buscar aluno
@@ -39,9 +43,9 @@ def menu():
 5 - Remover aluno
 6 - Alterar status
 0 - Sair    
-Escolha: """))
+Escolha: """)
     processar_opcao(opcao)
-    menu()
+    menu() # trocar a recurssao por while
     
 def main():
     menu()
