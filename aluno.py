@@ -26,14 +26,14 @@ class Aluno():
 
     @classmethod
     def listar_alunos(cls):
-        Aluno.cabecalho()
+        cls.cabecalho()
         for aluno in cls.lista_de_alunos:
             print(aluno)
         espera()
 
     @classmethod
     def buscar_aluno(cls, nome):
-        Aluno.cabecalho()
+        cls.cabecalho()
         for aluno in cls.lista_de_alunos:
             if  nome == aluno._nome:
                 print(aluno)
@@ -68,6 +68,19 @@ Escolha: """)
                 if nome == aluno._nome:
                     aluno._email = novo_email
         espera()
+
+    @classmethod
+
+    def remover_aluno(cls, nome):
+        cls.cabecalho
+        decicao = input('Tem certeza que deseja apagar os dados do aluno: ' + nome + '\n' + 'digite [sim] ou [não]: ')
+        if decicao == 'sim':
+            for aluno in cls.lista_de_alunos:
+                if nome == aluno._nome:
+                    cls.lista_de_alunos.remove(aluno)
+                    break
+        espera()
+        pass
 
     def cabecalho(): #print ou return?
         print('ID'.ljust(15) + '|' + 'NOME'.ljust(15) + '|' + 'IDADE'.ljust(15) + '|' + 'TELEFONE'.ljust(15) + '|' + 'EMAIL')

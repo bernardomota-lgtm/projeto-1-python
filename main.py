@@ -23,7 +23,10 @@ def processar_opcao(opcao):
         Aluno.buscar_aluno(nome)
         Aluno.alterar_aluno(nome)
     elif opcao == '5':
-        print('5')
+        print(titulo('Remover dados do aluno'))
+        nome = input('Digite o nome do aluno: ')
+        Aluno.buscar_aluno(nome)
+        Aluno.remover_aluno(nome)
     elif opcao == '6':
         print('6')
     elif opcao == '0':
