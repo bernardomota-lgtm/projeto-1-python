@@ -1,17 +1,18 @@
 from aluno import Aluno
+import verifica_entrada
 
 class Matricula():
     lista_de_alunos = []
 
     @classmethod
     def cadastrar_aluno(cls):
-        id_aluno = input('Id:')
+        id_aluno = verifica_entrada.id_aluno(cls.lista_de_alunos)
         nome = input('Nome:')
         idade = input('Idade:')
         telefone = input('Telefone:')
         email = input('Email:')
         #plano = input()
-        #status_matricula = input()
+        status_matricula = input()
         cls.lista_de_alunos.append(Aluno(id_aluno, nome, idade, telefone, email))
 
     @classmethod

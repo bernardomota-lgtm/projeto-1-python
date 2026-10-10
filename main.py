@@ -1,5 +1,4 @@
 import menu_principal
-import os
     
 def main():
     menu_principal.menu()

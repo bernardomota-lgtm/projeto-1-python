@@ -5,7 +5,6 @@ def menu():
     condicao = False
     while not condicao: 
         print(titulo('ACADEMIA FIT'))
-        
         opcao = input("""
     1 - Cadastrar aluno
     2 - Listar alunos
@@ -38,8 +37,8 @@ def processar_opcao(opcao):
             print(titulo('Remover dados do aluno'))
             nome = input('Digite o nome do aluno: ')
             Matricula.remover_aluno(nome)
-    #elif opcao == '6':
-    #    print('6')
+    elif opcao == '6':
+        print('6')
     elif opcao == '0':
         print('Saindo')
         return True
