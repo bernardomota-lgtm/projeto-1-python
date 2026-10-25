@@ -31,33 +31,23 @@ class Matricula():
         espera()
 
     @classmethod
-    def alterar_aluno(cls, nome):
-        opcao = input("""
-1 - Alterar nome
-2 - Alterar idade
-3 - Alterar telefone
-4 - Alterar email
-Escolha: """)
+    def alterar_aluno(cls,nome, opcao, alteracao):
         if opcao == '1':
-            novo_nome = input('Digite o novo nome: ')
             for aluno in cls.lista_de_alunos: # talvez reaproveitar o for da busca de alguma forma fatorar
                 if nome == aluno._nome:
-                    aluno._nome = novo_nome
+                    aluno._nome = alteracao
         elif opcao == '2':
-            nova_idade = input('Digite a nova idade: ')
             for aluno in cls.lista_de_alunos:
                 if nome == aluno._nome:
-                    aluno._idade = nova_idade
+                    aluno._idade = alteracao
         elif opcao == '3':
-            novo_telefone = input('Digite o novo número: ')
             for aluno in cls.lista_de_alunos:
                 if nome == aluno._nome:
-                    aluno._telefone = novo_telefone
+                    aluno._telefone = alteracao
         elif opcao == '4':
-            novo_email = input('Digite o novo email: ')
             for aluno in cls.lista_de_alunos:
                 if nome == aluno._nome:
-                    aluno._email = novo_email
+                    aluno._email = alteracao
         espera()
 
     @classmethod

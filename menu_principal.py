@@ -1,4 +1,5 @@
 from matricula import Matricula
+import menu_matricula
 import os
 
 def menu():
@@ -32,7 +33,7 @@ def processar_opcao(opcao):
         if opcao == '4':
             print(titulo('Alterar dados do aluno'))
             nome = input('Digite o nome do aluno: ')
-            Matricula.alterar_aluno(nome)
+            menu_matricula.menu_alterar_aluno(nome)
         elif opcao == '5':
             print(titulo('Remover dados do aluno'))
             nome = input('Digite o nome do aluno: ')
